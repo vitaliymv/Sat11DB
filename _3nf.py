@@ -4,7 +4,7 @@ def _3nf_db(cur):
            player_id INTEGER PRIMARY KEY,
            name TEXT,
            email TEXT
-           );
+        );
     """)
 
     cur.execute("""
@@ -31,7 +31,7 @@ def _3nf_db(cur):
             character_id INTEGER,
             item_id INTEGER,
             FOREIGN KEY (character_id) REFERENCES Characters(character_id),
-            FOREIGN KEY (item_id) REFERENCES Items(item_id)
+            FOREIGN KEY (item_id) REFERENCES Items(item_id))
     """)
 
     cur.execute("""
